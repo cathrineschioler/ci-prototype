@@ -3219,6 +3219,10 @@ p + .govuk-heading-s,
   text-transform: uppercase;
 }
 
+.govuk-tag-orange {
+  background-color: #f47738;
+}
+
 @media print {
   .govuk-tag {
     font-family: sans-serif;
