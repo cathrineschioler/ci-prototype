@@ -64,3 +64,15 @@
     margin-bottom: 0;
   }
 }
+
+.app-task-list__not-started {
+  margin-top: govuk-spacing(2);
+  margin-bottom: govuk-spacing(1);
+  background-color: #F47738;
+
+  @include govuk-media-query($from: 450px) {
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

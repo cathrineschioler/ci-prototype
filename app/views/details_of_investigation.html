@@ -1,0 +1,235 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Details of the investigation</h1>
+
+    <form class="form" action="/url/of/next/page" method="post">
+      <div class="govuk-form-group">
+
+<!-- Question 1 -->
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Planned date of investigation visit
+      </h1>
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+      For example, 8 11 2018
+    </span>
+    <div class="govuk-date-input govuk-!-padding-bottom-8" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Planned time of investigation visit
+      </h1>
+    </legend>
+    <span id="dob-hint" class="govuk-hint">
+      Use 24-hour clock. For example, 18:15
+    </span>
+    <div class="govuk-date-input__item govuk-date-input__item-nomargin govuk-!-padding-bottom-6">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="dob-month">
+          Hour
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+      </div>
+    </div>
+    <span>:</span>
+    <div class="govuk-date-input__item govuk-date-input__item-marginleft">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="dob-month">
+          Minutes
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+      </div>
+    </div>
+
+    <ul class="govuk-list"  id="visit1">
+      <li class="govuk-link">
+        <a class="govuk-link" href="#" onclick="elementShow()">
+          Add another visit
+        </a>
+      </li>
+    </ul>
+
+<!-- Second visit -->
+<div id="visit2">
+<legend class="govuk-section-break--visible govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-padding-top-8">
+  <h1 class="govuk-fieldset__heading">
+    Planned date of second investigation visit
+  </h1>
+</legend>
+<span id="dob-hint" class="govuk-hint">
+  For example, 8 11 2018
+</span>
+<div class="govuk-date-input govuk-!-padding-bottom-8" id="dob">
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-day">
+        Day
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+    </div>
+  </div>
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-month">
+        Month
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+    </div>
+  </div>
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="dob-year">
+        Year
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+    </div>
+  </div>
+</div>
+
+
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+  <h1 class="govuk-fieldset__heading">
+    Planned time of second investigation visit
+  </h1>
+</legend>
+<span id="dob-hint" class="govuk-hint">
+  Use 24-hour clock. For example, 18:15
+</span>
+<div class="govuk-date-input__item govuk-date-input__item-nomargin govuk-!-padding-bottom-6">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="dob-month">
+      Hour
+    </label>
+    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+  </div>
+</div>
+<span class="govuk-body">:</span>
+<div class="govuk-date-input__item govuk-date-input__item-marginleft">
+  <div class="govuk-form-group">
+    <label class="govuk-label govuk-date-input__label" for="dob-month">
+      Minutes
+    </label>
+    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+  </div>
+</div>
+<div class="govuk-!-padding-bottom-8"><a class="govuk-link" href="#" onclick="elementHide()">
+  Cancel
+</a></div>
+</div>
+
+    <script>
+    function elementShow() {
+        document.getElementById("visit2").style.display="block";
+        document.getElementById("visit1").style.display="none";
+    }
+    function elementHide() {
+        document.getElementById("visit2").style.display="none";
+        document.getElementById("visit1").style.display="block";
+    }
+    </script>
+
+  </fieldset>
+</div>
+
+<!-- Question 2 -->
+<div class="govuk-form-group govuk-!-padding-bottom-8">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Type of visit
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name-1">
+          Announced
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Unannounced
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+<div class="govuk-form-group govuk-!-padding-bottom-8">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Name of other Inspecting Officer or Inspection Volunteer
+      </h1>
+    </legend>
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    For example, advice from Team Manager, SI, IHD or other Professional Adviser staff
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="width-20" name="width-20" type="text">
+<span class="govuk-body">or</span>
+<div class="govuk-checkboxes" data-module="checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-1" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional-1">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-1">
+          No other participants
+        </label></div></div>
+
+</div>
+
+</div>
+
+<button class="govuk-button">Save and continue</button><a class="govuk-link govuk-!-margin-left-4" href="task_list.html">
+  Save and return to task list
+</a>
+
+  </form>
+  </div>
+</div>
+</div>
+
+{% endblock %}

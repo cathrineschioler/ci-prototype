@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Contact the complainant</h1>
+
+    <form class="form" action="/url/of/next/page" method="post">
+      <div class="govuk-form-group">
+
+<!-- Question 1 -->
+        <h4 class="govuk-heading-s">Has anything changed since you last spoke with us?</h4>
+        <div class="govuk-radios govuk-radios--inline  govuk-!-padding-bottom-8">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name-1">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+
+<!-- Question 2 -->
+        <h4 class="govuk-heading-s">Was this witnessed by anyone?</h4>
+        <div class="govuk-radios govuk-radios--inline govuk-!-padding-bottom-8">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name-1">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+
+
+    <!-- Question 3 -->
+        <h4 class="govuk-heading-s govuk-heading-s-nomargin">What do you hope to be the result of raising this complaint?</h4>
+        <div class="govuk-form-group govuk-!-padding-bottom-6">
+          <label class="govuk-label govuk-label-guidance" for="more-detail">
+            We cannot promise that the result you hope to see will necessarily happen
+          </label>
+          <textarea class="govuk-textarea govuk-textarea-nomargin" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+    <!-- Question 4 -->
+        <h4 class="govuk-heading-s govuk-heading-s-nomargin">Tell us if there are any details of this complaint we cannot share with the care service</h4>
+        <div class="govuk-form-group govuk-!-padding-bottom-8">
+          <label class="govuk-label govuk-label-guidance" for="more-detail">For example, can we share details of the specific incident, which might identify you
+          </label>
+          <textarea class="govuk-textarea govuk-textarea-nomargin" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+        <button class="govuk-button">Save and continue</button><a class="govuk-link govuk-!-margin-left-4" href="task_list.html">
+          Save and return to task list
+        </a>
+
+  </form>
+  </div>
+</div>
+</div>
+
+{% endblock %}

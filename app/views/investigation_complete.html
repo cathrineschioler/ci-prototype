@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Investigation complete</h1>
+        <div class="govuk-panel__body">
+          Case number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <p>
+        The complainant has been sent an email to update them of this.
+      </p>
+
+      <h2 class="govuk-heading-m">What next</h2>
+      <a href="my_dashboard.html">Return to My Dashboard</a>
+
+
+    </div>
+  </div>
+
+{% endblock %}
